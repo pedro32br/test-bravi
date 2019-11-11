@@ -12,7 +12,7 @@ import java.util.Stack;
 public class BracketController {
 
     /**
-     * Check sequence to check if this brackets close
+     * Check sequence to check if this brackets close sometime
      *
      * @param input of string.
      * @return True or False.
@@ -64,11 +64,22 @@ public class BracketController {
         return true;
     }
 
+    /**
+     *
+     * @param model
+     * @return the home page
+     */
     @GetMapping()
     public String showHomePage(ModelMap model){
         return "homePage";
     }
 
+    /**
+     *
+     * @param model
+     * @param input of string with brackets
+     * @return true or false if this brackets are balanced
+     */
     @PostMapping()
     public String isBalanced(ModelMap model, @RequestParam String input) {
 
